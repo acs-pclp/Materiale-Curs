@@ -34,7 +34,7 @@ def main():
 if __name__ == '__main__':
     main()
 
-# rulare: ./06-ecuatie_gradul1.py sau python3 ./06-ecuatie_gradul1.py
+# rulare: ./06-ecuatie_gradul2.py sau python3 ./06-ecuatie_gradul2.py
 # Pentru prima variantă, este necesar să avem drepturi de execuție asupra fișierului.
 # Exemple:
 #
