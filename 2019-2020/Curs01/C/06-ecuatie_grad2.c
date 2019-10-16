@@ -16,14 +16,14 @@ int main() {
 
     double delta = b * b - 4 * a * c;
 
-    if (delta < 0) {
-        printf("Ecuatia nu are solutii reale\n");
-    } else if (fabs(delta - 0) < eps) {
+    if (fabs(delta - 0) < eps) {
         /* <=> delta == 0, dar pentru numere reale nu putem
            pune conditia == 0, de asemenea pentru a obtine 
            modulul numerelor reale folosim functia fabs()  */
         x1 = x2 = -b / (2 * a);
         printf("x1 = x2 = %lf\n", x1);
+    } else if (delta < 0) {
+        printf("Ecuatia nu are solutii reale\n");
     } else {
         // Ecuatia are 2 solutii reale
         x1 = (-b + sqrt(delta)) / (2 * a);
