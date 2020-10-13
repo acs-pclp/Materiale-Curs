@@ -1,5 +1,5 @@
 /* Programarea Calculatoarelor CA, 2019-2020
-   Exemple cu operatori de incrementare / decrementare pre și post fixată  */ 
+   Exemple cu operatori de incrementare / decrementare pre și post fixată  */
 
 /*  Operatorul de incrementare este ++, iar cel de decremetare este --
 	Fiecare dintre acestia pot fi pre si post fixati;
