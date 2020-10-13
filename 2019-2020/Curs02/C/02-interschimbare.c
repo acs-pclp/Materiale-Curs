@@ -4,32 +4,33 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
     // interschimbare cu auxiliar
-    int a, b, aux;
-    scanf("%d%d", &a, &b);
-    aux = a;
-    a = b;
-    b = aux;
-    printf("%d %d\n", a, b);
+	int a, b, aux;
+	scanf("%d%d", &a, &b);
+	aux = a;
+	a = b;
+	b = aux;
+	printf("%d %d\n", a, b);
 
     // interschimbare cu xor
-    int x, y;
-    scanf("%d%d", &x, &y);
-    x = x ^ y;
-    y = x ^ y;
-    x = x ^ y;
-    printf("%d %d\n", x, y);
+	int x, y;
+	scanf("%d%d", &x, &y);
+	x = x ^ y;
+	y = x ^ y;
+	x = x ^ y;
+	printf("%d %d\n", x, y);
 
     // interschimbare cu adunari
-    int m, n;
-    scanf("%d%d", &m, &n);
-    m = m + n;
-    n = m - n;
-    m = m - n;
-    printf("%d %d\n", m, n);
+	int m, n;
+	scanf("%d%d", &m, &n);
+	m = m + n;
+	n = m - n;
+	m = m - n;
+	printf("%d %d\n", m, n);
 
-    return 0;
+	return 0;
 }
 
 /* compile: gcc 02-interschimbare.c -o interschimbare
