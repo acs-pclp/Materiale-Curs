@@ -18,3 +18,8 @@
 
 		 c = 14;
 		 d = --c; => c = 13, d = 13;  */
+
+int main(void)
+{
+	return 0;
+}
