@@ -34,7 +34,8 @@ struct Elev* getRandomStudents(const char MulteNume[][MAX_NAME_LENGTH])
 
 int main()
 {
-	const char MulteNume[NAMES_COUNT][MAX_NAME_LENGTH] = { "Popescu", "Stan", "Andrei", "Ion", "Darina" };
+	const char MulteNume[NAMES_COUNT][MAX_NAME_LENGTH] = { 
+		"Popescu", "Stan", "Andrei", "Ion", "Darina" };
 
 	struct Elev* elevi = getRandomStudents(MulteNume);
 	struct Elev maxNota = elevi[0];

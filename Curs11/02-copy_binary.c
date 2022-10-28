@@ -6,58 +6,59 @@
 
 #include <stdio.h>
 
-#define COPY_BUFFER_SIZE 1024
+#define BUFFER_SIZE 1024
 
 int main()
 {
-	FILE* copyfrom;
-	FILE* copyto;
-
-	char filename[100];
-
+	FILE *copyFrom, *copyTo;
+	char filename[101];
 	int readCount = 0, writeCount = 0;
 
 	// Size of file can be very big -> use a buffer
-	unsigned char buffer[COPY_BUFFER_SIZE];
+	unsigned char buffer[BUFFER_SIZE];
 
 	printf("File to copy: ");
-	scanf("%s", filename);
-	copyfrom = fopen(filename, "rb");
-
-	if (copyfrom == NULL)
+	scanf("%100s", filename);
+	
+	if ((copyFrom = fopen(filename, "rb")) == NULL)
 	{
 		fprintf(stderr, "%s", "No such file! Exiting...");
 		return -1;
 	}
 
 	printf("Copy to: ");
-	scanf("%s", filename);
-	copyto = fopen(filename, "wb");
+	scanf("%100s", filename);
+	
+	if ((copyTo = fopen(filename, "wb")) == NULL)
+	{
+		fprintf(stderr, "%s", "Cannot open/create %s file! Exiting...",
+			filename);
+		return -1;
+	}
 
 	do
 	{
-		readCount = fread(buffer, 1, COPY_BUFFER_SIZE, copyfrom);
-		writeCount = fwrite(buffer, 1, readCount, copyto);
+		readCount = fread(buffer, 1, BUFFER_SIZE, copyFrom);
+		writeCount = fwrite(buffer, 1, readCount, copyTo);
 
 		//	Error check for:
 		//		1. If the number of bytes read is different from the number of bytes written.
 		//		2. If the program couldn't read the whole buffer but EOF was not reached.
 		if ((readCount != writeCount) || 
-			((readCount < COPY_BUFFER_SIZE) && (feof(copyfrom) == 0)))
+			((readCount < BUFFER_SIZE) && (feof(copyFrom) == 0)))
 		{
 			fprintf(stderr, "Error copying. Exiting...");
 
-			fclose(copyfrom);
-			fclose(copyto);
+			fclose(copyFrom);
+			fclose(copyTo);
 
 			return -1;
 		}
 
-
-	} while (feof(copyfrom) == 0);
+	} while (feof(copyFrom) == 0);
 	
-	fclose(copyfrom);
-	fclose(copyto);
+	fclose(copyFrom);
+	fclose(copyTo);
 
 	return 0;
 }

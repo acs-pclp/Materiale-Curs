@@ -9,14 +9,19 @@
 
 int main()
 {
-	FILE* append;
-
-	char filename[100], text[100];
+	FILE *append;
+	char filename[101], text[101];
 	int read = 0;
 
 	printf("File to append: ");
-	scanf("%s", filename);
-	append = fopen(filename, "a");
+	scanf("%100s", filename);
+	
+	if ((append = fopen(filename, "a")) == NULL)
+	{
+		fprintf(stderr, "%s", "Cannot open/create %s file! Exiting...",
+			filename);
+		return -1;
+	}
 
 	printf("Type text:\n");
 	scanf("%100s", text);

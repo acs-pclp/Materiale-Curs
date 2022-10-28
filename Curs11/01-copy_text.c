@@ -8,37 +8,40 @@
 
 int main()
 {
-	FILE* copyfrom;
-	FILE* copyto;
-
-	char filename[100];
+	FILE *copyFrom, *copyTo;
+	char filename[101];
 	int read = 0;
 
 	printf("File to copy: ");
-	scanf("%s", filename);
-	copyfrom = fopen(filename, "r");
+	scanf("%100s", filename);
 
-	if (copyfrom == NULL)
+	if ((copyFrom = fopen(filename, "r")) == NULL)
 	{
 		fprintf(stderr, "%s", "No such file! Exiting...");
 		return -1;
 	}
 
 	printf("Copy to: ");
-	scanf("%s", filename);
-	copyto = fopen(filename, "w");
-
-	// Go character by character
-	read = fgetc(copyfrom);
-	while (read != EOF)
+	scanf("%100s", filename);
+	
+	if ((copyTo = fopen(filename, "w")) == NULL)
 	{
-		fputc(read, copyto);
-
-		read = fgetc(copyfrom);
+		fprintf(stderr, "%s", "Cannot open/create %s file! Exiting...",
+			filename);
+		return -1;
 	}
 
-	fclose(copyfrom);
-	fclose(copyto);
+	// Go character by character
+	read = fgetc(copyFrom);
+	while (read != EOF)
+	{
+		fputc(read, copyTo);
+
+		read = fgetc(copyFrom);
+	}
+
+	fclose(copyFrom);
+	fclose(copyTo);
 
 	return 0;
 }
