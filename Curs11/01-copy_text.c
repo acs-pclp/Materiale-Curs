@@ -37,6 +37,9 @@ int main()
 		read = fgetc(copyfrom);
 	}
 
+	fclose(copyfrom);
+	fclose(copyto);
+
 	return 0;
 }
 
