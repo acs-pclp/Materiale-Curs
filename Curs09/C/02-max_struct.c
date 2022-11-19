@@ -1,8 +1,8 @@
 ﻿/* Programarea Calculatoarelor CA, 2022-2023
-
-	Crearea unei structuri cu 2 campuri (nume si nota) si 
-		afisarea numelui cu cea mai mare nota. 
-
+*
+*	Crearea unei structuri cu 2 campuri (nume si nota) si 
+*		afisarea numelui cu cea mai mare nota. 
+*
 */
 
 #include <stdio.h>
@@ -12,21 +12,26 @@
 #define NAMES_COUNT 5
 #define MAX_NAME_LENGTH 8
 
-struct Elev
+struct Student
 {
-	char Nume[MAX_NAME_LENGTH];
-	float Nota;
+	char Name[MAX_NAME_LENGTH];
+	float Grade;
 };
 
-struct Elev* getRandomStudents(const char MulteNume[][MAX_NAME_LENGTH])
+struct Student* get_random_students(const char names_array[][MAX_NAME_LENGTH])
 {
-	struct Elev* elevi = malloc(sizeof(elevi) * NAMES_COUNT);
+	struct Student* elevi = malloc(sizeof(struct Student) * NAMES_COUNT);
+	if (elevi == NULL)
+	{
+		fprintf(stderr, "Out of memory! Exiting...\n");
+		exit(-11);
+	}
 
 	for (int i = 0; i < NAMES_COUNT; i++)
 	{
-		strncpy(elevi[i].Nume, MulteNume[i], MAX_NAME_LENGTH);
+		strncpy(elevi[i].Name, names_array[i], MAX_NAME_LENGTH);
 
-		elevi[i].Nota = (rand() % 1000) / 100.0;
+		elevi[i].Grade = (rand() % 1000) / 100.0;
 	}
 
 	return elevi;
@@ -34,46 +39,43 @@ struct Elev* getRandomStudents(const char MulteNume[][MAX_NAME_LENGTH])
 
 int main()
 {
-	const char MulteNume[NAMES_COUNT][MAX_NAME_LENGTH] = { 
+	const char names_array[NAMES_COUNT][MAX_NAME_LENGTH] = { 
 		"Popescu", "Stan", "Andrei", "Ion", "Darina" };
 
-	struct Elev* elevi = getRandomStudents(MulteNume);
-	struct Elev maxNota = elevi[0];
+	struct Student* students = get_random_students(names_array);
+	struct Student max_grade_student = students[0];
 	
 	printf("\nStudentii inregistrati:\n");
 
 	for (int i = 0; i < NAMES_COUNT; i++)
 	{
-		printf("(%8s,%8.2f)\n", elevi[i].Nume, elevi[i].Nota);
+		printf("(%8s,%8.2f)\n", students[i].Name, students[i].Grade);
 
-		if (maxNota.Nota < elevi[i].Nota)
+		if (max_grade_student.Grade < students[i].Grade)
 		{
-			maxNota = elevi[i];
+			max_grade_student = students[i];
 		}
 
 	}
 
-	printf("\nStudentul cu cea mai mare nota: %s\n", maxNota.Nume);
-
-	free(elevi);
-
+	printf("\nStudentul cu cea mai mare nota: %s\n", max_grade_student.Name);
+	free(students);
 	return 0;
 }
 
 /*
-
-	compile: gcc 02-max_struct.c -o max_struct
-	run: ./max_struct
-
-	Output:
-
-		Studenti inregistrati:
-			( Popescu,    0.41)
-			(    Stan,    4.67)
-			(  Andrei,    3.34)
-			(     Ion,    5.00)
-			(  Darina,    1.69)
-
-		Studentul cu cea mai mare nota: Ion
-
+*
+*	compile: gcc 02-max_struct.c -o max_struct
+*	run: ./max_struct
+*
+*	Output:
+*		Studenti inregistrati:
+*			( Popescu,    0.41)
+*			(    Stan,    4.67)
+*			(  Andrei,    3.34)
+*			(     Ion,    5.00)
+*			(  Darina,    1.69)
+*
+*		Studentul cu cea mai mare nota: Ion
+*
 */
