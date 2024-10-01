@@ -34,8 +34,8 @@ int main(void)
 
 /* compile: gcc 04-print_func.c -o print_func
 	run   : ./print_func
-		
-	output: 
+
+	output:
 	X
 	10
 	2.500000 */

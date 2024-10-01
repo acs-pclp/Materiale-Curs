@@ -8,7 +8,7 @@
 
 #define FILENAME_LENGTH 100
 
-int file_copy(FILE *const source, FILE *const dest)
+int file_copy(FILE * const source, FILE * const dest)
 {
 	int bytes = 0, read = 0;
 

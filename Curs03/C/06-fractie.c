@@ -124,20 +124,20 @@ int main(void)
 
    Exemplu: fractie
 
-   input  : 
+   input  :
    2 7
 
-   output : 
+   output :
    2 / 7 = 0.(285714)
 
-   input  : 
+   input  :
    1 4
 
-   output : 
+   output :
    1 / 4 = 0.25
 
-   input  : 
+   input  :
    4 3
 
-   output : 
+   output :
    4 / 3 = 1.(3) */

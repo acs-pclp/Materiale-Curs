@@ -10,19 +10,19 @@ import math  # pentru sqrt()
 
 
 def main():
+    # eps este eroarea pe care o vom folosi la compararea numerelor reale
+    eps = 0.0001
+
     # Citim primul rand din input (un șir de caractere), împărțim rezultatul după spațiu,
     # apoi transformăm fiecare componentă în numerăr real folosind map.
     # Rezultatul (2 numere reale, dacă input-ul este corect) se asignează variabilelor a, b și c.
     a, b, c = map(float, input().split())
 
-    # eps este eroarea pe care o vom folosi la compararea numerelor reale
-    eps = 0.0001
-
     delta = b * b - 4 * a * c
 
     if abs(delta - 0) < eps:
-        x1 = x2 = -b / 2 * a
-        print('x1 = x2 = {}'.format(x1))
+        x = -b / 2 * a
+        print('x1 = x2 = {}'.format(x))
     elif delta < 0:
         print('Ecuatia nu are solutii reale')
     else:

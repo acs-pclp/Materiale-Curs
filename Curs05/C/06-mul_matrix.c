@@ -51,7 +51,7 @@ int main(void)
 /* compile: gcc 06-mul_matrix.c -o mul_matrix
 	run    : ./mul_maxtrix
 
-	input  : 
+	input  :
 	2 3 4
 	2 3 4 1
 	3 4 5 1
@@ -60,11 +60,11 @@ int main(void)
 	3 4 6
 	7 6 5
 
-	output : 
+	output :
 	Matricea produc c = a x b de dimensiuna 2 x 3:
 	36    41    38
 	46    53    48
-	explicatie : 
+	explicatie :
 
 	n = 2, m = 3, p = 4
 	Matricea a de dimensiuna 2 x 4:

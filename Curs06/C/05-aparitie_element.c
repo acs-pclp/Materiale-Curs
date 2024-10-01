@@ -79,14 +79,14 @@ int main(void)
    1 2 3 4
    5
 
-   output : 
+   output :
    Elementul nu a fost gasit
 
-   input  : 
+   input  :
    4
    2 2 2 3
    3
-   
-   output : 
+
+   output :
    Prima aparitie se afla pe pozitia 3
 	*/

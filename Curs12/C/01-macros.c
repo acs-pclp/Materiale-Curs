@@ -76,9 +76,9 @@ int main(void)
  *		1 + 2 + 3 + 4 = 10 can someone explain?
  *
  * * * * * * * * * * * * * * * * * * * * * * * * *
- * 
- * 	Preprocessing phase: gcc -E 01-macros.c
- * 		int main(void)
+ *
+ *	Preprocessing phase: gcc -E 01-macros.c
+ *		int main(void)
  *		{
  *			int a, b;
  *			scanf("%d%d", &a, &b);

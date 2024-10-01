@@ -8,7 +8,7 @@ int main(void)
 {
 	int n, invers = 0;
 	scanf("%d", &n);
-	
+
 	int copie = n;
 	while (copie > 0) {
 		invers = invers * 10 + copie % 10;

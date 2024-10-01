@@ -48,9 +48,9 @@ int main(void)
 
 	Exemplu:
 
-	input : 
+	input :
 	4 5
-	
+
 	output:
 	Inainte de schimbarea valorii
 	a = 4

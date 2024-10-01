@@ -3,42 +3,48 @@
    Programul rezolva o ecuatie de gradul 2 : a*x^2 + b*x + c = 0  */
 
 #include <stdio.h>
-#include <math.h>  // pentru functia sqrt(radical) si fabs(modul)
+#include <math.h>  // pentru functia sqrt (radical) si fabs (modul)
 
-int main() {
-    double a, b, c, x1, x2, eps = 0.0001;
-    /* eps este eroarea pe care o folosim cand comparam numere reale (float, double) 
-       vom considera ca x == y, daca |x - y| < eps (ex: eps = 0.0001)  */
-    scanf("%lf%lf%lf", &a, &b, &c);
+int main(void)
+{
+	const double eps = 0.0001;
+	/* eps este eroarea pe care o folosim cand comparam numere reale
+	  (float, double) vom considera ca x == y,
+	  daca |x - y| < eps (ex: eps = 0.0001)  */
 
-    /* Pentru ca ecuatia sa fie de gradul II consideram ca a este diferit de 0
-       Exercitiu suplimentar: tratati cazul in care a = 0 (ecuatie de gradul I);  */
+	/* Coeficienti din ecuatia: ax^2 + bx + c = 0 */
+	double a, b, c;
+	scanf("%lf%lf%lf", &a, &b, &c);
 
-    double delta = b * b - 4 * a * c;
+	/* Pentru ca ecuatia sa fie de gradul II consideram ca a este diferit de 0
+	   Exercitiu suplimentar: tratati cazul in care a = 0
+							  (ecuatie de gradul I) */
+	double delta = b * b - 4 * a * c;
 
-    if (fabs(delta - 0) < eps) {
-        /* <=> delta == 0, dar pentru numere reale nu putem
-           pune conditia == 0, de asemenea pentru a obtine 
-           modulul numerelor reale folosim functia fabs()  */
-        x1 = x2 = -b / (2 * a);
-        printf("x1 = x2 = %lf\n", x1);
-    } else if (delta < 0) {
-        printf("Ecuatia nu are solutii reale\n");
-    } else {
-        // Ecuatia are 2 solutii reale
-        x1 = (-b + sqrt(delta)) / (2 * a);
-        x2 = (-b - sqrt(delta)) / (2 * a);
+	if (fabs(delta - 0) < eps) {
+		/* <=> delta == 0, dar pentru numere reale nu putem
+		   pune conditia == 0, de asemenea pentru a obtine
+		   modulul numerelor reale folosim functia fabs()  */
+		double x = -b / (2 * a);
+		printf("x1 = x2 = %lf\n", x);
+	} else if (delta < 0) {
+		printf("Ecuatia nu are solutii reale\n");
+	} else {
+		// Ecuatia are 2 solutii reale
+		double x1 = (-b + sqrt(delta)) / (2 * a);
+		double x2 = (-b - sqrt(delta)) / (2 * a);
 
-        printf("x1 = %lf\nx2 = %lf\n", x1, x2);
-    }
-    return 0;
+		printf("x1 = %lf\nx2 = %lf\n", x1, x2);
+	}
+
+	return 0;
 }
 
-/* compile: gcc 06-ecuatie_grad2.c -lm -o ecuatie2 
+/* compile: gcc 06-ecuatie_grad2.c -lm -o ecuatie2
    (folosim flagul -lm pentru biblioteca math.h)
    run    : ./ecuatie2
 
-   Exemplu 
+   Exemplu
    input:
    5 3 2
    output:

@@ -9,7 +9,7 @@
 #define BUFFER_SIZE 1024
 #define FILENAME_LENGTH 100
 
-int binary_copy(FILE *const source, FILE *const dest)
+int binary_copy(FILE * const source, FILE * const dest)
 {
 	int bytes = 0, read_count = 0, write_count = 0;
 

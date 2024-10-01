@@ -5,20 +5,21 @@
 
 #include <stdio.h>
 
-int main() {
-    int a, b, min, max;
-    scanf("%d%d", &a, &b);
+int main(void)
+{
+	int a, b, min, max;
+	scanf("%d%d", &a, &b);
 
-    if (a > b) {
-        max = a;
-        min = b;
-    } else {
-        max = b;
-        min = a;
-    }
+	if (a > b) {
+		max = a;
+		min = b;
+	} else {
+		max = b;
+		min = a;
+	}
 
-    printf("max: %d\nmin: %d\n", max, min);
-    return 0;
+	printf("max: %d\nmin: %d\n", max, min);
+	return 0;
 }
 
 /* compile: gcc 04-min_max_if.c -o minmax

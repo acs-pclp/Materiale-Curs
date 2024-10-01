@@ -9,7 +9,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int isnumber(const char * str)
+int isnumber(const char *str)
 {
 	for (int i = 0; str[i] != '\0'; i++)
 		if (!isdigit(str[i]))

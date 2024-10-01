@@ -56,15 +56,15 @@ int main(void)
 /*  compile: gcc 04-goldbach.c -o goldbach
     run    : ./goldbach
 
-    Exemplu: 
+    Exemplu:
 
-    input : 
+    input :
 	10
-    output: 
+    output:
 	2 = 1 + 1
 	4 = 1 + 3 = 2 + 2
 	6 = 1 + 5 = 3 + 3
 	8 = 1 + 7 = 3 + 5
 	10 = 3 + 7 = 5 + 5
-	
+
     */

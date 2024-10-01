@@ -26,21 +26,21 @@ int main(void)
 
    Exemplu: sum_poz
 
-   input : 
+   input :
    4 5 6 -9 1 0
 
-   output: 
+   output:
    Suma termenilor pozitivi = 16
 
-   input : 
+   input :
    1 3 5 7 -2 0
 
-   output: 
+   output:
    Suma termenilor pozitivi = 16
 
-   input : 
+   input :
    -1 -1 -1 0
-   
-   output: 
+
+   output:
    Suma termenilor pozitivi = 0 */
 
