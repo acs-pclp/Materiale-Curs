@@ -1,6 +1,9 @@
 # PCLP1 CA - Curs
 
-### Maintainers
+### Coordinator
+* [Florin Pop](https://github.com/florinpop1981) (2020 - ongoing)
+
+* ### Maintainers
 * [Radu Nichita](https://github.com/RaduNichita)
 * [Darius Neațu](https://github.com/neatudarius)
 * [Dorinel Filip](https://github.com/dorinelfilip)
