@@ -37,26 +37,26 @@ int main(void)
 
    Exemplu:
 
-   input  : 
+   input  :
    3 3
    1 0 0
    0 1 0
 
-   output : 
+   output :
    Produsul scalar este 0
 
-   input  : 
+   input  :
    2 2
    4 0
    6 0
 
-   output : 
+   output :
    Produsul scalar este 24
 
-   input  : 
+   input  :
    3 3
    4 1 0
    5 5 5
 
-   output : 
+   output :
    Produsul scalar este 25 */

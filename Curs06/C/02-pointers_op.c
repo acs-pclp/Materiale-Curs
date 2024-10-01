@@ -11,7 +11,7 @@ int main(void)
 	p = (int **)5;
 	q = 10;
 
-	printf("%p - %d\n", q + p, (int) (q + p));
+	printf("%p - %d\n", q + p, (int)(q + p));
 
 	return 0;
 }
@@ -21,7 +21,6 @@ int main(void)
 
 	output:
 	0x55 - 85
-
 
 	In acest exemplu sizeof(int*) este 8 (rulat pe 64 biti).
 	*/

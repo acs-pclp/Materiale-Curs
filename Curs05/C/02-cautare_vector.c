@@ -31,12 +31,12 @@ int find_array_binarysearch(int n, int v[NMAX], int x)
 		/* am gasit elementul cautat */
 		if (v[mid] == x) {
 			return mid;
-		/* elementul curent e mai mare decat cel cautat, trebuie sa ma uit 
-			in intervalul [v[left], v[mid - 1]) */ 
+		/* elementul curent e mai mare decat cel cautat, trebuie sa ma uit
+			in intervalul [v[left], v[mid - 1]) */
 		} else if (x < v[mid]) {
 			right = mid - 1;
-		/* elementul curent e mai mare decat cel cautat, trebuie sa ma uit 
-			in intervalul [v[mid + 1], v[right]) */ 	
+		/* elementul curent e mai mare decat cel cautat, trebuie sa ma uit
+			in intervalul [v[mid + 1], v[right]) */
 		} else {
 			left = mid + 1;
 		}

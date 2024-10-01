@@ -40,7 +40,7 @@ int main(void)
 	secunde = (int)secunde;
 
 	printf("%d grade %d minute %d secunde %d sutimi de secunda\n",
-		   (int)grade, (int)minute, (int) secunde, (int) sutimi);
+		   (int)grade, (int)minute, (int)secunde, (int) sutimi);
 
 	return 0;
 }

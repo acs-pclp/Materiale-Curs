@@ -60,7 +60,7 @@ int no_days(DATE d1, DATE d2)
 		}
 		return days;
 	}
-	
+
 	return 0;
 }
 

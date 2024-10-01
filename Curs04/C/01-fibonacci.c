@@ -60,20 +60,20 @@ int main(void)
 
    Exemplu: fibo
 
-   input : 
+   input :
    40
 
-   output: 
+   output:
    165580141 - calculat in 0.000003 secunde
    165580141 - calculat in 0.594261 secunde
 
-   input : 
+   input :
    30
-   output: 
+   output:
    1346269 - calculat in 0.000005 secunde
    1346269 - calculat in 0.032210 secunde
 
    input : 45
-   output: 
+   output:
    1836311903 - calculat in 0.000004 secunde
    1836311903 - calculat in 7.281272 secunde */

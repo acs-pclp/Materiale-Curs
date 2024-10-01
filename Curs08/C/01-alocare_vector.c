@@ -46,9 +46,9 @@ int main(void)
 /* compile: gcc -Wall -Wextra -o 01-alocare_vector 01-alocare_vector.c
 	run   : ./01-alocare_vector
 
-  	input:
-  	3
-  	1 2 3
+	input:
+	3
+	1 2 3
 
 	output:
 	1 2 3

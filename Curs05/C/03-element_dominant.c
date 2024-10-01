@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #define NMAX 10
-#define kINF 1 << 30
+#define kINF (1 << 30)
 
 void read_array(int n, int v[NMAX])
 {

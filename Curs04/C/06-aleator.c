@@ -6,10 +6,10 @@ Un generator congruenţial de numere aleatoare este definit printr-o
 relaţie de forma:
 	xn+1 =(a*xn + b) % c,
 în care x0 poartă numele de sămânţa (seed) generatorului. a, b şi x_{0} sunt
-numere prime, care asigură o distribuţie aleatoare a numerelor în secvenţa 
-x_{n}. c oferă domeniul în care se generează numerele aleatoare şi se alege, 
+numere prime, care asigură o distribuţie aleatoare a numerelor în secvenţa
+x_{n}. c oferă domeniul în care se generează numerele aleatoare şi se alege,
 de obicei, tot un număr prim. Funcţia generator de numere aleatoare calculează
-cu relaţia de mai sus pe x_{n+1} şi-l întoarce ca rezultat. Valoarea xn 
+cu relaţia de mai sus pe x_{n+1} şi-l întoarce ca rezultat. Valoarea xn
 trebuie să provină din apelul precedent al funcţiei, aşa că va fi declarată ca
 variabilă statică, iniţializată cu valoarea sămânţei x_{0}. Iniţializarea va fi
 făcută numai la primul apel al funcţiei, la fiecare din apelurile următoare se
@@ -46,19 +46,19 @@ int main(void)
 
    Exemplu: aleator
 
-   input  : 
+   input  :
    100 5
 
-   output : 
+   output :
    50 3 60 93 70
 
-   input  : 
+   input  :
    100 7
-   output : 
+   output :
    50 3 60 93 70 83 80
 
-   input  : 
+   input  :
    50 7
-   output : 
+   output :
    0 3 10 43 20 33 30 */
 

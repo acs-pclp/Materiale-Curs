@@ -19,7 +19,7 @@ int main(void)
 /* compile: gcc 01-print_addr.c -o print_addr
 	run   : ./print_addr
 
-	output: 
+	output:
 	0x7ffeea2bab00
 	0x7ffeea2bab04
 	0x7ffeea2bab00

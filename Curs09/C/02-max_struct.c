@@ -12,8 +12,7 @@
 #define NAMES_COUNT 5
 #define MAX_NAME_LENGTH 8
 
-struct student_t
-{
+struct student_t {
 	char name[MAX_NAME_LENGTH];
 	float grade;
 };

@@ -36,7 +36,6 @@ void read_matrix(int *n, int *m, int ***mat)
 			scanf("%d", &a[i][j]);
 		}
 	}
-
 }
 
 void print_matrix(int n, int m, int **mat)

@@ -58,20 +58,20 @@ int main(void)
 
    Exemplu:
 
-   input  : 
+   input  :
    MCMXCVIII
 
-   output : 
+   output :
    MCMXCVIII = 1998
 
-   input  : 
+   input  :
    MDCLXVI
-   
-   output : 
+
+   output :
    MDCLXVI = 1666
 
-   input  : 
+   input  :
    MMXX
-   
-   output : 
+
+   output :
    MMXX = 2020 */

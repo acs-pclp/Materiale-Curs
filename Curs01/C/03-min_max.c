@@ -6,15 +6,16 @@
 #include <stdio.h>
 #include <stdlib.h>  // pentru a folosi functia abs (modul)
 
-int main() {
-    int a, b, min, max;
-    scanf("%d%d", &a, &b);
+int main(void)
+{
+	int a, b, min, max;
+	scanf("%d%d", &a, &b);
 
-    max = (a + b + abs(a - b)) / 2;
-    min = (a + b - max);
+	max = (a + b + abs(a - b)) / 2;
+	min = (a + b - max);
 
-    printf("max: %d\nmin: %d\n", max, min);
-    return 0;
+	printf("max: %d\nmin: %d\n", max, min);
+	return 0;
 }
 
 /* compile: gcc 03-min_max.c -o minmax

@@ -27,8 +27,8 @@ int *filter(const int n, int *m, int * const v, int (*f_ptr)(int))
 			result[(*m)++] = v[i];
 		}
 	}
-	
-	int *tmp = (int *) realloc(result, *m * sizeof(int));
+
+	int *tmp = (int *)realloc(result, *m * sizeof(int));
 	if (!tmp) {
 		free(result);
 		return NULL;

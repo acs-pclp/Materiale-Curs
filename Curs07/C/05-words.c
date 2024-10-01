@@ -25,12 +25,12 @@ int find_word(char *p, int nw, char *words[])
 
 int main(void)
 {
-	const char delim[] = " .,:;-()\t\n";	/* separatori intre cuvinte */
+	static const char delim[] = " .,:;-()\t\n";	/* separatori intre cuvinte */
 	char line[MAX_LINE];					/* tampon pentru citirea unei linii */
 	char *words[NW], f[NW], *p;				/* tablou de cuvinte */
 	int nw = 0, pos;
 
-	freopen("text.txt", "r", stdin); /* redirectez stdin - programul va citi 
+	freopen("text.txt", "r", stdin); /* redirectez stdin - programul va citi
 								 din text.txt: echivalent cu 05-words < text.txt */
 
 	while (fgets(line, MAX_LINE, stdin)) {

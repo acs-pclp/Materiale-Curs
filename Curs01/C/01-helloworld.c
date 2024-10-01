@@ -4,9 +4,10 @@
 
 #include <stdio.h> // pentru a folosi printf si scanf
 
-int main() {
-    printf("Hello World!\n");
-    return 0;
+int main(void)
+{
+	printf("Hello World!\n");
+	return 0;
 }
 
 /* compile: gcc 01-helloworld.c -o helloworld
